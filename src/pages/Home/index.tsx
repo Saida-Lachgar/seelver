@@ -5,7 +5,14 @@ import axios from 'axios';
 function Home() {
   const [count, setCount] = useState(0);
 
-  axios.get('https://jsonplaceholder.typicode.com/posts')
+  axios.get(`${import.meta.env.VITE_API}/posts`)
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+  axios.get(`${import.meta.env.VITE_API}/comments`)
   .then(response => {
     console.log(response.data);
   })
