@@ -1,20 +1,15 @@
-import './App.css'
-import { Link, Outlet } from "react-router-dom";
+import './index.scss';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { Outlet } from "react-router-dom";
+import SideBar from './components/Icon copy';
 
 export default function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <>
-      [FIXED_CONTENT]
-
-      <nav>
-        <Link to="/">Home</Link>
-        {" | "}
-        <Link to="/blog">blog</Link>
-      </nav>
-
+    <QueryClientProvider client={queryClient}>
+      <SideBar />
       <Outlet />
-
-      [FIXED_CONTENT]
-    </>
+    </QueryClientProvider>
   );
 }
