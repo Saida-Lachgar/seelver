@@ -11,7 +11,7 @@ export type FetchMenuDuJour = {
  * @returns URL de l'association.
  */
 const getMenuDuJour = async ({ id }: FetchMenuDuJour) => (
-  (await requester.get(`posts/${id}`)).data
+  (await requester.get(`db/${id}`)).data
 );
 
 export default {
