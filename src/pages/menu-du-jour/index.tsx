@@ -4,35 +4,18 @@ import Icon from 'src/components/Icon';
 import MenuDuJourItem from './item';
 import api, { FetchMenuDuJour } from 'src/api';
 import useFetch from 'src/utils/useFetch';
+import { useParams } from 'react-router-dom';
 
 const MenuDuJour = (): JSX.Element => {
-
-  // axios.get(`${import.meta.env.VITE_API}/posts`)
-  // .then(response => {
-  //   console.log(response.data);
-  // })
-  // .catch(error => {
-  //   console.log(error);
-  // });
-  // axios.get(`${import.meta.env.VITE_API}/comments`)
-  // .then(response => {
-  //   console.log(response.data);
-  // })
-  // .catch(error => {
-  //   console.log(error);
-  // });
+  const { id } = useParams();
 
   const { data, isLoading, error } = useFetch<FetchMenuDuJour, null>(
-    {
-      cacheKey: 'credit',
-      id: 2,
-    },
+    { cacheKey: 'MenuDuJour', id },
     api.getMenuDuJour,
-    // { enabled: !!creditId },
+    { enabled: !!id },
   );
 
   console.log(data);
-  
   
   return (
     <div className="MenuDuJour">

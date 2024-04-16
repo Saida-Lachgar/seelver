@@ -7,15 +7,15 @@ import MenuDuJour from "./pages/menu-du-jour/index.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/:id",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/:id",
         element: <MenuDuJour />,
       },
       {
-        path: "/blog",
+        path: "/:id/blog",
         element: <Blog />,
       },
     ],

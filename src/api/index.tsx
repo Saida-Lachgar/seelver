@@ -1,7 +1,7 @@
 import requester from "src/utils/requester";
 
 export type FetchMenuDuJour = {
-  id: number,
+  id?: string,
 };
 
 /**
@@ -11,7 +11,7 @@ export type FetchMenuDuJour = {
  * @returns URL de l'association.
  */
 const getMenuDuJour = async ({ id }: FetchMenuDuJour) => (
-  (await requester.get(`db/${id}`)).data
+  (await requester.get(`db`)).data
 );
 
 export default {
