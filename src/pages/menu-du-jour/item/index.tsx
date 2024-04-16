@@ -4,10 +4,14 @@ import './index.scss';
 type Props = {
   repas: string,
   icon: string,
-  details: string,
+  details?: string,
 };
 
-const MenuDuJourItem = ({ repas, icon, details }: Props): JSX.Element => {
+const MenuDuJourItem = ({ repas, icon, details }: Props): JSX.Element | null => {
+  if(!details) {
+    return null;
+  }
+
   return (
     <div className='MenuDuJourItem'>
       <p className="MenuDuJourItem__repas">

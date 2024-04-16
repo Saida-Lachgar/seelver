@@ -11,6 +11,8 @@ import Gouter from './gouter.svg?react'
 import PetitDejeuner from './petit-dejeuner.svg?react'
 import Restaurant from './restaurant.svg?react'
 
+import Loading from './loading.svg?react'
+
 
 export default {
   'activite-du-jour': ActiviteDuJour,
@@ -24,4 +26,5 @@ export default {
   'gouter': Gouter,
   'petit-dejeuner': PetitDejeuner,
   'restaurant': Restaurant,
+  'loading': Loading,
 };
