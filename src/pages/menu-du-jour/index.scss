@@ -1,13 +1,13 @@
 .MenuDuJour {
-  &__titre {
-    color: #EE7E22;
-    font-family: "Work Sans";
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
+  text-align: center;
+  svg {
+    margin-right: 10px;
   }
-
-  
+  &__titre {
+    color: var(--color-secondary);
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
 }

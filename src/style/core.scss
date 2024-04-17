@@ -1,0 +1,12 @@
+:root {
+  --color-primary: #013e59;
+  --color-secondary: #ee7e22;
+  --font-primary: 'Work Sans';
+}
+
+body {
+  line-height: normal;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-size: 18px;
+}

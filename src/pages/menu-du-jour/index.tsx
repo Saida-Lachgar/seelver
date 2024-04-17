@@ -17,7 +17,7 @@ const MenuDuJour = (): JSX.Element => {
   );
 
   return (
-    <div className="MenuDuJour">
+    <div className="Section MenuDuJour">
       <p className="MenuDuJour__titre">
         <Icon name="dejeuner"></Icon>
         Menu du jour
@@ -25,8 +25,7 @@ const MenuDuJour = (): JSX.Element => {
 
       {isLoading && <Loading />}
 
-      {error && "&#9888; quelque chose a mal tourné"}
-      {"&#9888; quelque chose a mal tourné"}
+      {error && <>&#9888; quelque chose a mal tourné</>}
 
       {!isLoading && data && <>
         <MenuDuJourItem

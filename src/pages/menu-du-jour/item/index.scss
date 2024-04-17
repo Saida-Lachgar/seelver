@@ -1,15 +1,15 @@
 .MenuDuJourItem {
   &__details {
-   
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.17;
+    max-width: 668px;
+    margin: 0 auto 26px;
   }
 
   &__repas {
-    color: #013E59;
-    text-align: center;
-    font-family: "Work Sans";
     font-size: 36px;
-    font-style: normal;
     font-weight: 600;
-    line-height: 2.2;
+    margin-bottom: 5px;
   }
 }

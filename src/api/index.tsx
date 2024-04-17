@@ -26,7 +26,19 @@ const getMedia = async ({ id }: FetchById) => (
   // (await requester.get(`route/${id}`)).data
 );
 
+/**
+ * Retourner Actualités de la résidence.
+ *
+ * @param id L'ID de la résidence 
+ * @returns json data.
+ */
+const getActualitesDeLaResidence = async ({ id }: FetchById) => (
+  (await requester.get<Menu>(`b4f2fa6c0208498a091b`)).data
+  // (await requester.get(`route/${id}`)).data
+);
+
 export default {
   getMenuDuJour,
   getMedia,
+  getActualitesDeLaResidence,
 };

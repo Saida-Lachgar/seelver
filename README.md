@@ -35,3 +35,8 @@ https://github.com/ErickKS/vite-react-router
 
 A spring that solves your animation problems
 https://github.com/chenglou/react-motion
+
+animation https://react-simple-animate.vercel.app/animate
+db https://www.npoint.io/docs/b4f2fa6c0208498a091b
+
+https://myseelver.com/098/presentation

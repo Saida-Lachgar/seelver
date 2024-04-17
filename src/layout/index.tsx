@@ -1,7 +1,8 @@
+import './index.scss';
 import { useParams } from "react-router-dom";
-import SideBar from "../Icon copy";
 import useFetch from "src/utils/useFetch";
 import api, { FetchById } from 'src/api';
+import SideBar from './Sidebar';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) : JSX.Element => {
   const { id } = useParams();
@@ -13,15 +14,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) : JSX.Ele
   );
 
   return (
-    <>
+    <div className="Layout">
       <SideBar logo={data?.logo} />
-      <main 
-        className="Main"
-        style={{ backgroundImage: `url(${data?.background})` }}
-      >
+      <main className="Main">
+        { data?.background && <img className="Background" src={data.background} alt="" /> }
         {children}
       </main>
-    </>
+    </div>
   );
 };
 
